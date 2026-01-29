@@ -23,3 +23,24 @@ This prototype is designed to test how player progression flags are preserved du
 - /Source: C++ implementation of the "Powerizer" and logic-gate event triggers.
 - /Content: UE5 assets, including the "Mountain Cliff" and "Hidden Office Lab" environments.
 - /Docs: Original design documentation and user experience briefs.
+
+### Getting Started
+**Prerequisites**  
+- Unreal Engine 5.3+: Required to open the .uproject and compile C++ classes.
+- Visual Studio 2022: With "Game development with C++" workload installed.
+- Git LFS: Essential for cloning the high-resolution elemental assets and level data.  
+
+**Installation**  
+1. Clone the Repository:
+```
+Bash
+git clone https://github.com/NevinsN/Elemental-Escapist.git
+```
+2. Generate Project Files: Right-click ElementalEscapist.uproject and select "Generate Visual Studio project files."
+3. Build the Solution: Open the .sln file in Visual Studio and build the project in Development Editor mode.
+4. Launch: Open the project in the Unreal Editor to explore the Mountain Cliff and Hidden Office Lab environments. 
+
+### Integration with NexusGate (Cloud Setup, Upcoming)
+Note: While this project can be run standalone, it is designed to communicate with the NexusGate Orchestrator.  
+- State Persistence: To enable cloud-sync for "Powerizer" ammunition and puzzle flags, ensure a local Redis instance is running.
+- Signal Verification: The C++ logic hooks in /Source/ElementalEscapist/Private/Abilities will attempt to signal the NexusGate API on port 8080 during level transitions.
